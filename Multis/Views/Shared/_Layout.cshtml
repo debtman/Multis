@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<style>
+    ul.hr {
+        margin: 0; /* Обнуляем значение отступов */
+        padding: 4px; /* Значение полей */
+    }
+
+        ul.hr li {
+            display: inline; /* Отображать как строчный элемент */
+            margin-right: 5px; /* Отступ слева */
+            border: 1px solid #000; /* Рамка вокруг текста */
+            padding: 3px; /* Поля вокруг текста */
+        }
+</style>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+
+
+<body>
+    <!--меню-->
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div>
+                <ul class="navbar-nav">
+                    <li  class="nav-item"><a href="~/Home/Index" class="navbar-brand">Главная</a></li>
+                    <li class="nav-item"><a href="~/Home/UserList" class="navbar-brand">Пользователи</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--основной контент-->
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>© 2019 - Multis</p>
+        </footer>
+    </div>
+</body>
+</html>
