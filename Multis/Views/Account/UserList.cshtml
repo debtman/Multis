@@ -1,7 +1,51 @@
 ﻿
+@model IEnumerable<Multis.Models.MerchUser>
 @{
     ViewData["Title"] = "UserList";
 }
 
-<h1>Пользователи</h1>
+<html>
+<head>
+</head>
+<body>
+    <h1>Пользователи</h1>
+    <table>
+        <tr>
+            <td>Логин</td>
+            <td>Юридическое название компании</td>
+            <td>Маркетинговое название</td>
+            <td>Руководитель фирмы</td>
+            <td>Номер телефона руководителя</td>
+            <td>Email</td>
+            <td>Страна работы</td>
+            <td>Город</td>
+            <td>Адрес магазина</td>
+            <td>Номер счета компании</td>
+        </tr>
+        @if (Model != null)
+        {
+            @foreach (var _user in Model)
+            {
+                <tr>
+                    <td>@_user.Login</td>
+                    <td>@_user.JName</td>
+                    <td>@_user.Suprviser</td>
+                    <td>@_user.SuperPhoneNum</td>
+                    <td>@_user.EMail</td>
+                    <td>@_user.Country</td>
+                    <td>@_user.City</td>
+                    <td>@_user.ShopAddress</td>
+                    <td>@_user.Account</td>
+                    <td><a href="~/Home/Buy/@_user.Login">Купить</a></td>
+                </tr>
+            }
+        }
+    </table>
+
+    <div style="padding-bottom">
+        @Html.ActionLink("Добавить", "Register", "Account")
+    </div>
+</body>
+
+</html>
 
