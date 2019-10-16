@@ -19,13 +19,12 @@ namespace Multis.Models
 */
     public class MerchUser
     {
-        public string Login { get; set; }
-        public string Password { get; set; }
+        public User SysUserInfo;
+        
         public string JName { get; set; }
         public string MName { get; set; }
-        public string Suprviser { get; set; }
+        public string Superviser { get; set; }
         public string SuperPhoneNum { get; set; }
-        public string EMail { get; set; }
         public string Country { get; set; }
         public string City { get; set; }
         public string ShopAddress { get; set; }

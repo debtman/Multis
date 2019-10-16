@@ -44,12 +44,19 @@ namespace Multis.Models
         [Required(ErrorMessage = "Не указан номер телефона")]
         [DataType(DataType.PhoneNumber)]
         public string SuperPhoneNum { get; set; }
-
-
-
+                
         [Required(ErrorMessage = "Не указан Email")]
         [DataType(DataType.EmailAddress)]
         public string EMail { get; set; }
+        
+        public string Country { get; set; }
+        [Required(ErrorMessage = "Не указан город")]
+        public string City { get; set; }
+        [Required(ErrorMessage = "Не указан адрес магазина")]
+        public string Address { get; set; }
+        [Required(ErrorMessage = "Не номер счета")]
+        public string Account { get; set; }
+
 
 
     }

@@ -27,22 +27,22 @@
             @foreach (var _user in Model)
             {
                 <tr>
-                    <td>@_user.Login</td>
+                    <td>@_user.SysUserInfo.Login</td>
                     <td>@_user.JName</td>
-                    <td>@_user.Suprviser</td>
+                    <td>@_user.Superviser</td>
                     <td>@_user.SuperPhoneNum</td>
-                    <td>@_user.EMail</td>
+                    <td>@_user.SysUserInfo.Email</td>
                     <td>@_user.Country</td>
                     <td>@_user.City</td>
                     <td>@_user.ShopAddress</td>
                     <td>@_user.Account</td>
-                    <td><a href="~/Home/Buy/@_user.Login">Купить</a></td>
+                    <td><a href="~/Home/Buy/@_user.SysUserInfo.Login">Купить</a></td>
                 </tr>
             }
         }
     </table>
 
-    <div style="padding-bottom">
+    <div>
         @Html.ActionLink("Добавить", "Register", "Account")
     </div>
 </body>

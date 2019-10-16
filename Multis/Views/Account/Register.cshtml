@@ -20,6 +20,12 @@
             <input asp-for="ConfirmPassword" />
             <span asp-validation-for="ConfirmPassword" />
         </div>
+        
+        <div>
+            @Html.DropDownList("Role", new SelectList(new string[] { "Администратор", "Продавец" }), "Выберите роль")
+
+        </div>
+
         <div>
             <label asp-for="JName">Юридическое название</label><br />
             <input type="text" asp-for="JName" />
@@ -36,14 +42,33 @@
             <span asp-validation-for="Superviser" />
         </div>
         <div>
-            <label asp-for="SuperPhoneNum">Руководитель</label><br />
+            <label asp-for="SuperPhoneNum">Номер телефона</label><br />
             <input type="text" asp-for="SuperPhoneNum" />
             <span asp-validation-for="SuperPhoneNum" />
         </div>
+        <div>
+            <label asp-for="Country">Страна</label><br />
+            <input type="text" asp-for="Country" />
+            <span asp-validation-for="Country" />
+        </div>
 
+        <div>
+            <label asp-for="City">Город</label><br />
+            <input type="text" asp-for="City" />
+            <span asp-validation-for="City" />
+        </div>
+        <div>
+            <label asp-for="Address">Адрес</label><br />
+            <input type="text" asp-for="Address" />
+            <span asp-validation-for="Address" />
+        </div>
+        <div>
+            <label asp-for="Account">Номер счета</label><br />
+            <input type="text" asp-for="Account" />
+            <span asp-validation-for="Account" />
+        </div>
 
-
-
+        
         <div>
             <input type="submit" value="Регистрация" />
         </div>
