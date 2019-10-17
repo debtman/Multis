@@ -29,62 +29,78 @@
                     <input asp-for="ConfirmPassword" />
                     <span asp-validation-for="ConfirmPassword" />
                 </td>
-
             </tr>
+            <tr>
+                <td colspan="6">
+                    @Html.DropDownList("Role", new SelectList(new string[] { "Администратор", "Продавец" }), "Выберите роль")
+                </td>
+            </tr>
+            
         </table>
-    </div>>
-
-    <div>
-        @Html.DropDownList("Role", new SelectList(new string[] { "Администратор", "Продавец" }), "Выберите роль")
-
     </div>
+
     <div>
-               
+        <h2>Дополнительные сведения</h2>
+    
+       <table>
+           <tr>
+               <td>Юридическое название</td>
+               <td>
+                   <input type="text" asp-for="JName" />
+                   <span asp-validation-for="JName" />
+               </td>
 
+               <td>
+                   Маркетинговое название
+               </td>
+               <td>
+                   <input type="text" asp-for="MName" />
+                   <span asp-validation-for="MName" />
+               </td>
+               <td>
+                   Руководитель
+               </td>
+               <td>
+                   <input type="text" asp-for="Superviser" />
+                   <span asp-validation-for="Superviser" />
+               </td>
+           </tr>
+           <tr>
+               <td>Номер телефона</td>
+               <td>
+                   <input type="text" asp-for="SuperPhoneNum" />
+                   <span asp-validation-for="SuperPhoneNum" />
+               </td>
+           
+               <td>Страна</td>
+               <td>
+                   <input type="text" asp-for="Country" />
+                   <span asp-validation-for="Country" />
+               </td>
+               <td>
+                   Город
+               </td>
+               <td>
+                   <input type="text" asp-for="City" />
+                   <span asp-validation-for="City" />
+               </td>
+           </tr>
+           <tr>
+               <td>Адрес</td>
+               <td>
+                   <input type="text" asp-for="Address" />
+                   <span asp-validation-for="Address" />
+               </td>
+               <td>Номер счета</td>
+               <td>
+                   <input type="text" asp-for="Account" />
+                   <span asp-validation-for="Account" />
+               </td>
+           </tr>
 
-
-        <div>
-            <label asp-for="JName">Юридическое название</label><br />
-            <input type="text" asp-for="JName" />
-            <span asp-validation-for="JName" />
-        </div>
-        <div>
-            <label asp-for="JName">Маркетинговое название</label><br />
-            <input type="text" asp-for="MName" />
-            <span asp-validation-for="MName" />
-        </div>
-        <div>
-            <label asp-for="Superviser">Руководитель</label><br />
-            <input type="text" asp-for="Superviser" />
-            <span asp-validation-for="Superviser" />
-        </div>
-        <div>
-            <label asp-for="SuperPhoneNum">Номер телефона</label><br />
-            <input type="text" asp-for="SuperPhoneNum" />
-            <span asp-validation-for="SuperPhoneNum" />
-        </div>
-        <div>
-            <label asp-for="Country">Страна</label><br />
-            <input type="text" asp-for="Country" />
-            <span asp-validation-for="Country" />
-        </div>
-
-        <div>
-            <label asp-for="City">Город</label><br />
-            <input type="text" asp-for="City" />
-            <span asp-validation-for="City" />
-        </div>
-        <div>
-            <label asp-for="Address">Адрес</label><br />
-            <input type="text" asp-for="Address" />
-            <span asp-validation-for="Address" />
-        </div>
-        <div>
-            <label asp-for="Account">Номер счета</label><br />
-            <input type="text" asp-for="Account" />
-            <span asp-validation-for="Account" />
-        </div>
-
+       </table>
+        
+        
 
         <div>
             <input type="submit" value="Регистрация" />
